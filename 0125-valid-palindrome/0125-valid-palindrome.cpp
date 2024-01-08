@@ -1,7 +1,7 @@
 class Solution {
 public:
     bool isPalindrome(string s) {
-        int n=s.size(); bool k=false;
+        int n=s.size(); 
         string a;
         if(s.size()==1) return true;
         for(int i=0; i<n; i++) {
@@ -10,11 +10,10 @@ public:
         int m=a.size();    
         if(a.size()<2) return true;
         for(int i=0, j=m-1; i<m,j>=0; i++, j--) {
-            if(a[i]==a[j]) k=true;
-            else { k=false; break; }
+            if(a[i]!=a[j]) return false; 
             
         }
-            return k;
+            return true;
         }
 
         
