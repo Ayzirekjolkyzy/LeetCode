@@ -2,7 +2,7 @@ class Solution {
 public:
     vector<int> findDisappearedNumbers(vector<int>& nums) {
         int n = nums.size();
-        set<int> numSet(nums.begin(), nums.end());
+        unordered_set<int> numSet(nums.begin(), nums.end());
         vector<int> result;
 
         for (int i = 1; i <= n; ++i) {
