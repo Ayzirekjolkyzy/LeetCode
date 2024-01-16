@@ -7,7 +7,7 @@ public:
             for(int j=0; j<grid[i].size(); j++) {
                 if(i==j) continue;
                 else {
-                   if(grid[i][j]==0) k=false; 
+                   if(grid[i][j]==0) { k=false; break;} 
                  }
             }
             if(k) {  ret=i; break; } 
