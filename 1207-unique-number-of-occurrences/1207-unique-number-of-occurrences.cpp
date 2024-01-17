@@ -9,15 +9,12 @@ public:
             if(arr[i] == arr[j]){
                 j++;
                 cnt++;
-                continue;
             }
-            // ans.push_back(cnt);
             else if(arr[i] != arr[j]){
                 ans.push_back(cnt);
                 j += 1;
                 cnt = 1;
-                continue;
-            }
+               }
            
         }
         ans.push_back(cnt);
