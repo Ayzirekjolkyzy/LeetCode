@@ -2,11 +2,11 @@ class Solution {
 public:
     string finalString(string s) {
         string ret="";
-        for(int i=0; i<s.size(); i++) {
-            if(s[i]=='i') {
+        for(auto i : s) {
+            if(i=='i') {
                 reverse(ret.begin(), ret.end());
             }
-            else ret+=s[i];
+            else ret+=i;
         }
         return ret;
     }
