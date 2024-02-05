@@ -13,14 +13,10 @@ public:
     ListNode* removeElements(ListNode* head, int val1) {
         if(head==NULL) return head;
         ListNode *pos=head;
-    
-        while(pos!=NULL&&pos->next!=NULL) {
-            if(pos->next->val==val1) { pos->next=pos->next->next;
-                                 }
-            else{
-            pos=pos->next;
-        
-        }}
+        while(pos->next!=NULL) {
+            if(pos->next->val==val1)  pos->next=pos->next->next;
+            else pos=pos->next;
+        }
         if(head->val==val1) head=head->next;
         return head;
     }
