@@ -13,10 +13,7 @@ public:
     ListNode* insertGreatestCommonDivisors(ListNode* head) {
         ListNode* f=head;
         while(f->next!=NULL) {
-            int a=gcd(f->val, f->next->val);
-            ListNode* t=new ListNode(a,f->next);
-           // t->val=gcd(f->val, f->next->val);
-           // t->next=f->next;
+            ListNode* t=new ListNode(gcd(f->val, f->next->val),f->next);
             f->next=t;
             f=t->next;
         }
