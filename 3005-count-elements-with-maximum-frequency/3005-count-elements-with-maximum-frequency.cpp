@@ -10,7 +10,7 @@ public:
         }
         temp.push_back(k);
         sort(temp.begin(), temp.end(), greater<int>());
-        t=temp[0]; k=temp[0]; int m=0;
+        t=temp[0]; k=temp[0];
         for(int i=1; i<temp.size(); i++) {
             if(temp[i]==t) k+=t;
         }
