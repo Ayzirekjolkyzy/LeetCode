@@ -9,7 +9,6 @@ public:
                         swap(s[j], s[t]);
                     else if(t!=j&&(s[t]==s[j]))
                         swap(s[j], s[++t]);
-                    else continue;
                 }
             }
         }
