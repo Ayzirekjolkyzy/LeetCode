@@ -7,16 +7,13 @@ public:
     }
     
     void push(int x) {
-        if(a.size()==0) front=x;
         a.push_back(x);
     }
     
     int pop() {
-        
         front=a[0];
         a.erase(a.begin());
         return front;
-       
     }
     
     int peek() {
