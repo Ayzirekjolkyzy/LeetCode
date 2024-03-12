@@ -1,5 +1,5 @@
 class MyQueue {
-    vector<int> a, b;
+    vector<int> a;
     int front;
 public:
     MyQueue() {
