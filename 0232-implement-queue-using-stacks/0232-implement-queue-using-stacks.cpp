@@ -1,5 +1,5 @@
 class MyQueue {
-    stack<int> a, b;
+    vector<int> a, b;
     int front;
 public:
     MyQueue() {
@@ -7,30 +7,24 @@ public:
     }
     
     void push(int x) {
-        if(a.empty()) front=x;
-        a.push(x);
+        if(a.size()==0) front=x;
+        a.push_back(x);
     }
     
     int pop() {
-        if(b.empty()) {
-            while(!a.empty()) {
-                int x=a.top();
-                a.pop();
-                b.push(x);
-            }
-        }
-        int x=b.top();
-        b.pop();
-        return x;
+        
+        front=a[0];
+        a.erase(a.begin());
+        return front;
+       
     }
     
     int peek() {
-        if(b.empty()) return front;
-        return b.top();
+        return a[0];
     }
     
     bool empty() {
-        return a.empty()&&b.empty();
+        return a.size()<=0;
     }
 };
 
